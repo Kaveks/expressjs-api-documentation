@@ -52,16 +52,16 @@ This is an **Express.js** backend built using **TypeScript**, featuring **authen
 
 ### 1️⃣ Clone the repository
 
-````sh
+```sh
 git clone git@github.com:Kaveks/expressjs-api-documentation.git
 cd expressjs-api-documentation
-
+```
 
 ### 2️⃣ Install dependencies
 
 ```sh
 npm install
-````
+```
 
 ### 3️⃣ Create a **.env** file
 
