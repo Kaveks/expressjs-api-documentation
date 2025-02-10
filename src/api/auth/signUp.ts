@@ -1,6 +1,6 @@
-import express, { Request, Response } from "express";
-import bcrypt from "bcryptjs";
-import { v4 as uuidv4 } from "uuid";
+import express, { Request, Response } from 'express';
+import bcrypt from 'bcryptjs';
+import { v4 as uuidv4 } from 'uuid';
 
 const router = express.Router();
 
@@ -9,10 +9,12 @@ const users: { [key: string]: any } = {};
 
 /**
  * @swagger
- * /signUp:
+ * /api/auth/signUp:
  *   post:
  *     summary: Register a new user
  *     description: This API allows a user to register by providing details like email, username, and password.
+ *     tags:
+ *       - Auth  # Reference to the existing Auth tag
  *     requestBody:
  *       description: User details for registration
  *       required: true
@@ -51,7 +53,7 @@ const users: { [key: string]: any } = {};
  *       500:
  *         description: Internal server error
  */
-router.post("/signUp", async (req: Request, res: Response): Promise<void> => {
+router.post('/signUp', async (req: Request, res: Response): Promise<void> => {
   try {
     const {
       email,
@@ -66,13 +68,13 @@ router.post("/signUp", async (req: Request, res: Response): Promise<void> => {
 
     // Basic validation
     if (!email || !password || !username || !firstname || !lastname) {
-      res.status(400).json({ message: "Missing required fields" });
+      res.status(400).json({ message: 'Missing required fields' });
       return;
     }
 
     // Check if user already exists
     if (users[email]) {
-      res.status(400).json({ message: "Email already registered" });
+      res.status(400).json({ message: 'Email already registered' });
       return;
     }
 
@@ -100,10 +102,10 @@ router.post("/signUp", async (req: Request, res: Response): Promise<void> => {
       updatedAt: new Date(),
     };
 
-    res.status(201).json({ message: "User registered successfully" });
+    res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
-    console.error("Registration Error:", error);
-    res.status(500).json({ message: "Internal server error" });
+    console.error('Registration Error:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 });
 
