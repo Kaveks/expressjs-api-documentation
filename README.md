@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-This is an **Express.js** backend built using **TypeScript**, featuring **authentication (SignUp & SignIn)**, API documentation with **Swagger & ReDoc**, and **cookie-based authentication**.
+This is an **Express.js** backend built using **TypeScript**, featuring **authentication (SignUp & SignIn)**, API documentation with **Swagger & ReDoc**, and **Basic authentication scheme to access the endpoint**.
 
 ## 🚀 Features
 
@@ -47,6 +47,11 @@ This is an **Express.js** backend built using **TypeScript**, featuring **authen
 | ├── `package-lock.json`           | Dependency lock file                 |
 | ├── `tsconfig.json`               | TypeScript configuration             |
 | └── `README.md`                   | Project documentation (this file)    |
+
+## 🔑 Login Credentials
+
+- **Username**: `testuser`
+- **Password**: `password123`
 
 ## 🛠 Installation
 
