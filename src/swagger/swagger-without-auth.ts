@@ -17,6 +17,16 @@ const options = {
         description: 'Local development server',
       },
     ],
+    tags: [
+      {
+        name: 'Auth', // Tag for authentication-related endpoints
+        description: 'Operations related to user authentication',
+      },
+      {
+        name: 'Users', // Tag for user-related operations
+        description: 'Operations related to user management',
+      },
+    ],
   },
   apis: ['src/api/auth/*.ts', 'src/api/users/*.ts'], // Path to the api routes
 };

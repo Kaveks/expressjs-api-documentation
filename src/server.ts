@@ -37,7 +37,7 @@ setupSwaggerWithAuth(app);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port: http://localhost:${PORT}`);
   console.log(`📜 Swagger UI: http://localhost:${PORT}/swagger`);
   console.log(`📘 ReDoc: http://localhost:${PORT}/redoc`);
   console.log(
